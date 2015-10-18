@@ -1,0 +1,4 @@
+Usuário bibi logado com sucesso!
+(17/10/2015 19:53:34) Erro do login do usuario bibi
+
+(17/10/2015 19:53:38) Usuário bibi logado com sucesso!

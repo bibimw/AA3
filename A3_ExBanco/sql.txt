@@ -1,0 +1,21 @@
+drop table usuario;
+drop table conta;
+
+create table usuario(
+id_u int not null primary key generated always as identity (start with 1, increment by 1),
+username varchar(10) not null,
+password varchar(7) not null
+);
+
+create table conta(
+id_c int not null primary key generated always as identity (start with 1, increment by 1),
+id_usuario int,
+saldo double not null
+);
+
+alter table conta add foreign key(id_usuario) references usuario(id_u);
+
+insert into usuario(username,password) values('bibi','345'); 
+insert into usuario(username,password) values('admin','123'); 
+insert into conta(id_usuario, saldo) values(1, 2000); 
+insert into conta(id_usuario, saldo) values(2, 500);
